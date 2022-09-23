@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class SoccerBall : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public delegate void ScoredGoal();
+    public static event ScoredGoal GoalEvent;
+    public void OnCollisionEnter(Collision collision)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (collision.gameObject.GetComponent<GoalLeft>() != null)
+        {
+            Destroy(this.gameObject);
+            GoalEvent?.Invoke();
+        }
+        if (collision.gameObject.GetComponent<GoalRight>() != null)
+        {
+            Destroy(this.gameObject);
+            GoalEvent?.Invoke();
+        }
     }
 }

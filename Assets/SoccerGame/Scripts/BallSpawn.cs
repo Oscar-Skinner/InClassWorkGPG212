@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,17 +6,12 @@ using UnityEngine;
 public class BallSpawn : MonoBehaviour
 {
     public GameObject Ball;
-    
-    /*void OnEnable()
+
+    private void OnEnable()
     {
-        EventManager.BallSpawned += BallRespawn();
+        SoccerBall.GoalEvent += BallRespawn;
     }
 
-    void OnDisable()
-    {
-        EventManager.BallSpawned -= BallRespawn();
-    }
-    
     void Start()
     {
         Instantiate(Ball);
@@ -24,7 +20,7 @@ public class BallSpawn : MonoBehaviour
     void BallRespawn()
     {
         Instantiate(Ball);
-    }*/
+    }
 
     
 }

@@ -1,29 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EventManager : MonoBehaviour
 {
-    public delegate void increaseLeftPoints();
-    public static event increaseLeftPoints leftPoints;
+    public delegate void LeftScores();
+    public static event LeftScores LeftScoresPoints;
 
     public static void PointsForTheLeft()
     {
-        if(leftPoints != null)
-        {
-            leftPoints();
-        }
+        LeftScoresPoints?.Invoke();
     }
 
-    public delegate void increaseRightPoints();
-    public static event increaseRightPoints rightPoints;
+    public delegate void RightScores();
+    public static event RightScores RightScoresPoints;
 
     public static void PointsForTheRight()
     {
-        if(rightPoints != null)
-        {
-            rightPoints();
-        }
+        RightScoresPoints?.Invoke();
     }
-
 }
