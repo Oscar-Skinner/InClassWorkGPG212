@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Supporters : MonoBehaviour
 {
-    
     private void OnEnable()
     {
         EventManager.LeftScoresPoints += LeftCheer;
@@ -20,11 +19,9 @@ public class Supporters : MonoBehaviour
     public void LeftCheer()
     {
         this.GetComponent<Rigidbody>().velocity = new Vector3(0, Random.Range(3f,6f), 0);
-        print("celebrate");
     }
     public void RightCheer()
     {
         this.GetComponent<Rigidbody>().velocity = new Vector3(0, Random.Range(3f,6f), 0);
-        print("celebrate");
     }
 }

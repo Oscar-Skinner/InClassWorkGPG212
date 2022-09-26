@@ -8,6 +8,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/SoccerGame/Scripts/InvisibleWalls.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/StandaloneInputModule.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -24,6 +25,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "XThreadsFramesViewSplitterKey": "0.5009597",
     "settings.editor.selected.configurable": "preferences.sourceCode.C#",
     "vue.rearranger.settings.migration": "true"
   }
@@ -47,10 +49,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="9052">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="9052" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -67,6 +69,8 @@
       <option name="presentableId" value="Default" />
       <updated>1663895059891</updated>
       <workItem from="1663895072169" duration="20303000" />
+      <workItem from="1664010271662" duration="93000" />
+      <workItem from="1664155893896" duration="6719000" />
     </task>
     <servers />
   </component>
@@ -89,5 +93,37 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/SoccerGame/Scripts/CommentatorsBooth.cs</url>
+          <line>9</line>
+          <properties documentPath="C:\Users\Oscar Skinner\Documents\InClassWorkGPG212\Assets\SoccerGame\Scripts\CommentatorsBooth.cs" initialLine="9" containingFunctionPresentation="method 'OnEnable'">
+            <startOffsets>
+              <option value="199" />
+            </startOffsets>
+            <endOffsets>
+              <option value="232" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/SoccerGame/Scripts/CommentatorsBooth.cs</url>
+          <line>20</line>
+          <properties documentPath="C:\Users\Oscar Skinner\Documents\InClassWorkGPG212\Assets\SoccerGame\Scripts\CommentatorsBooth.cs" initialLine="20" containingFunctionPresentation="method 'BallIsOutComment'">
+            <startOffsets>
+              <option value="467" />
+            </startOffsets>
+            <endOffsets>
+              <option value="540" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

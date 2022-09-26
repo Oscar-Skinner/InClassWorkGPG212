@@ -2,17 +2,14 @@ using UnityEngine;
 
 public class EventManager : MonoBehaviour
 {
-    public delegate void LeftScores();
-    public static event LeftScores LeftScoresPoints;
+    public delegate void Scores();
+    public static event Scores LeftScoresPoints;
+    public static event Scores RightScoresPoints;
 
     public static void PointsForTheLeft()
     {
         LeftScoresPoints?.Invoke();
     }
-
-    public delegate void RightScores();
-    public static event RightScores RightScoresPoints;
-
     public static void PointsForTheRight()
     {
         RightScoresPoints?.Invoke();

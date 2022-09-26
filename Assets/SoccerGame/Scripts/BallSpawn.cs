@@ -12,6 +12,11 @@ public class BallSpawn : MonoBehaviour
         SoccerBall.GoalEvent += BallRespawn;
     }
 
+    private void OnDisable()
+    {
+        SoccerBall.GoalEvent -= BallRespawn;
+    }
+
     void Start()
     {
         Instantiate(Ball);
@@ -21,6 +26,5 @@ public class BallSpawn : MonoBehaviour
     {
         Instantiate(Ball);
     }
-
     
 }
