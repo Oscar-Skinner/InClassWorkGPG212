@@ -14,7 +14,6 @@ public class InvisibleWalls : MonoBehaviour
         if(collision.gameObject.GetComponent<SoccerBall>() != null)
         {
             OutOfBounds?.Invoke();
-            print("wall");
         }
     }
 }
