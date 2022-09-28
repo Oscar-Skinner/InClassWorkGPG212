@@ -8,14 +8,14 @@ public class CommentatorsBooth : MonoBehaviour
     private void OnEnable()
     {
         InvisibleWalls.OutOfBounds += BallIsOutComment;
-        SoccerBall.GoalLeftEvent += LeftTeamScored;
-        SoccerBall.GoalRightEvent += RightTeamScored;
+        GameManager.GoalLeftEvent += LeftTeamScored;
+        GameManager.GoalRightEvent += RightTeamScored;
     }
     private void OnDisable()
     {
         InvisibleWalls.OutOfBounds -= BallIsOutComment;
-        SoccerBall.GoalLeftEvent -= LeftTeamScored;
-        SoccerBall.GoalRightEvent -= RightTeamScored;
+        GameManager.GoalLeftEvent -= LeftTeamScored;
+        GameManager.GoalRightEvent -= RightTeamScored;
     }
 
     private void Start()

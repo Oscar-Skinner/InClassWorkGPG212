@@ -6,20 +6,15 @@ public class SoccerBall : MonoBehaviour
 {
     public Material leftTeam;
     public Material rightTeam;
-    public delegate void ScoredGoal();
-    public static event ScoredGoal GoalLeftEvent;
-    public static event ScoredGoal GoalRightEvent;
     public void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.GetComponent<GoalLeft>() != null)
+        if (collision.gameObject.GetComponent<Goal>() != null)
         {
             Destroy(this.gameObject);
-            GoalRightEvent?.Invoke();
         }
-        if (collision.gameObject.GetComponent<GoalRight>() != null)
+        if (collision.gameObject.GetComponent<Goal>() != null)
         {
             Destroy(this.gameObject);
-            GoalLeftEvent?.Invoke();
         }
     }
 }

@@ -8,13 +8,13 @@ public class Supporters : MonoBehaviour
 {
     private void OnEnable()
     {
-        SoccerBall.GoalLeftEvent += LeftCheer;
-        SoccerBall.GoalRightEvent +=  RightCheer;
+        GameManager.GoalLeftEvent += LeftCheer;
+        GameManager.GoalRightEvent +=  RightCheer;
     }
     private void OnDisable()
     {
-        SoccerBall.GoalLeftEvent -= LeftCheer;
-        SoccerBall.GoalRightEvent -=  RightCheer;
+        GameManager.GoalLeftEvent -= LeftCheer;
+        GameManager.GoalRightEvent -=  RightCheer;
     }
 
     private void FixedUpdate()

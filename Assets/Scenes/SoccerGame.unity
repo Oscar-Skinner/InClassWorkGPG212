@@ -1773,7 +1773,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.5
+      scalar: 1
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -6407,11 +6407,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 327902781}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.375, z: -0.4}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.2}
+  m_LocalPosition: {x: -215, y: 2, z: -2.8}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 915393363}
+  m_Father: {fileID: 1916902344}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1 &334840375
@@ -6774,8 +6774,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 509444532}
+  - component: {fileID: 509444533}
   m_Layer: 0
-  m_Name: Ref
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6798,6 +6799,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &509444533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 509444530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa03ad99798fd3c48885e8b69eabd1d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goal:
+  - {fileID: 840715774}
+  - {fileID: 915393364}
+  teamName: 0
+  scoreLeft: 0
+  scoreRight: 0
 --- !u!1 &678587711
 GameObject:
   m_ObjectHideFlags: 0
@@ -6997,11 +7016,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 707569885}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.375, z: 0.4}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.2}
+  m_LocalPosition: {x: -215, y: 2, z: 2.8}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 915393363}
+  m_Father: {fileID: 1916902344}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!199 &707569887
@@ -7159,7 +7178,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.5
+      scalar: 1
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -12065,11 +12084,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 740029030}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 30, y: 0.375, z: 0.4}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.2}
+  m_LocalPosition: {x: -185, y: 2, z: 2.8}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 915393363}
+  m_Father: {fileID: 1916902344}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!199 &740029032
@@ -12227,7 +12246,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.5
+      scalar: 1
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -16993,6 +17012,7 @@ GameObject:
   - component: {fileID: 840715771}
   - component: {fileID: 840715770}
   - component: {fileID: 840715774}
+  - component: {fileID: 840715775}
   m_Layer: 0
   m_Name: GoalRight
   m_TagString: Untagged
@@ -17087,9 +17107,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 840715769}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1a51db3b2870bf43a8c916ed6a30623, type: 3}
+  m_Script: {fileID: 11500000, guid: 30cb6b31597908741861a078ff188ee9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  teamName: 0
+--- !u!114 &840715775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 840715769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59a1937e67ff62943b90b20597ef39d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teamName: 1
 --- !u!1 &859261596
 GameObject:
   m_ObjectHideFlags: 0
@@ -17230,6 +17264,7 @@ GameObject:
   - component: {fileID: 915393361}
   - component: {fileID: 915393360}
   - component: {fileID: 915393364}
+  - component: {fileID: 915393365}
   m_Layer: 0
   m_Name: GoalLeft
   m_TagString: Untagged
@@ -17311,11 +17346,7 @@ Transform:
   m_LocalPosition: {x: -28.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 327902784}
-  - {fileID: 707569886}
-  - {fileID: 740029031}
-  - {fileID: 2106109624}
+  m_Children: []
   m_Father: {fileID: 509444532}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -17331,10 +17362,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30cb6b31597908741861a078ff188ee9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftGoalParticles1: {fileID: 327902783}
-  leftGoalParticles2: {fileID: 707569888}
-  rightGoalParticles1: {fileID: 740029033}
-  rightGoalParticles2: {fileID: 2106109626}
+  teamName: 0
+--- !u!114 &915393365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 915393359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59a1937e67ff62943b90b20597ef39d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teamName: 0
 --- !u!1 &929419060
 GameObject:
   m_ObjectHideFlags: 0
@@ -20385,6 +20426,58 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc68de8a876928d4da64f68fdcfbaaa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1916902342
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1916902344}
+  - component: {fileID: 1916902343}
+  m_Layer: 0
+  m_Name: Confetti
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1916902343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1916902342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 903e1ac284cfb2c40abbf3127a8a3bc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftGoalParticles1: {fileID: 327902783}
+  leftGoalParticles2: {fileID: 707569888}
+  rightGoalParticles1: {fileID: 740029033}
+  rightGoalParticles2: {fileID: 2106109626}
+--- !u!4 &1916902344
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1916902342}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 200, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 327902784}
+  - {fileID: 707569886}
+  - {fileID: 740029031}
+  - {fileID: 2106109624}
+  m_Father: {fileID: 0}
+  m_RootOrder: 25
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1919059940
 GameObject:
   m_ObjectHideFlags: 0
@@ -21251,11 +21344,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2106109623}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 30, y: 0.375, z: -0.4}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.2}
+  m_LocalPosition: {x: -185, y: 2, z: -2.8}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 915393363}
+  m_Father: {fileID: 1916902344}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!199 &2106109625
@@ -21413,7 +21506,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.5
+      scalar: 1
       minScalar: 5
       maxCurve:
         serializedVersion: 2

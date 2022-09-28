@@ -15,13 +15,13 @@ public class UIPoints : MonoBehaviour
 
     void OnEnable()
     {
-        SoccerBall.GoalLeftEvent += LeftScoresGetsPoints;
-        SoccerBall.GoalRightEvent += RightScoresGetsPoints;
+        GameManager.GoalLeftEvent += LeftScoresGetsPoints;
+        GameManager.GoalRightEvent += RightScoresGetsPoints;
     }
     void OnDisable()
     {
-        SoccerBall.GoalLeftEvent -= LeftScoresGetsPoints;
-        SoccerBall.GoalRightEvent -= RightScoresGetsPoints;
+        GameManager.GoalLeftEvent -= LeftScoresGetsPoints;
+        GameManager.GoalRightEvent -= RightScoresGetsPoints;
     }
 
     void Start()

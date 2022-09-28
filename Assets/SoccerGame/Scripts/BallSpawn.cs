@@ -9,14 +9,14 @@ public class BallSpawn : MonoBehaviour
 
     private void OnEnable()
     {
-        SoccerBall.GoalLeftEvent += BallRespawn;
-        SoccerBall.GoalRightEvent += BallRespawn;
+        GameManager.GoalLeftEvent += BallRespawn;
+        GameManager.GoalRightEvent += BallRespawn;
     }
 
     private void OnDisable()
     {
-        SoccerBall.GoalLeftEvent -= BallRespawn;
-        SoccerBall.GoalRightEvent -= BallRespawn;
+        GameManager.GoalLeftEvent -= BallRespawn;
+        GameManager.GoalRightEvent -= BallRespawn;
     }
 
     void Start()
