@@ -11,8 +11,7 @@ public class GoalRight : MonoBehaviour
         //if the ball collides then print Right point
         if(collision.gameObject.GetComponent<SoccerBall>() != null)
         {
-            print("Left Scored");
-            EventManager.PointsForTheLeft();
+            
         }
     }
 }
