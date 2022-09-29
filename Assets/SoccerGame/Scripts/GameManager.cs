@@ -3,13 +3,9 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public Goal[] goal;
-
+    
     public Team.TeamName teamName;
-    
-    public int scoreLeft;
-    public int scoreRight;
 
-    
     private void Start()
     {
         for (var index = 0; index <goal.Length; index++)
@@ -18,7 +14,9 @@ public class GameManager : MonoBehaviour
             item.GoalEvent += GoalOnGoalEvent;
         }
     }
-
+    
+    // public delegate void ScoredGoal();
+    // public event ScoredGoal TeamScored;
     public delegate void Scored();
     public static event Scored GoalRightEvent;
     public static event Scored GoalLeftEvent;
@@ -28,15 +26,11 @@ public class GameManager : MonoBehaviour
 
         if (newGoal.name == "GoalLeft")
         {
-            scoreLeft++;
-            print(scoreLeft);
             GoalRightEvent?.Invoke();
         }
         
         if (newGoal.name == "GoalRight")
         {
-            scoreRight++;
-            print(scoreRight);
             GoalLeftEvent?.Invoke();
         }
     }

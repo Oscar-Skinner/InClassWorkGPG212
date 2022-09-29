@@ -12,7 +12,7 @@ public class BallSpawn : MonoBehaviour
         GameManager.GoalLeftEvent += BallRespawn;
         GameManager.GoalRightEvent += BallRespawn;
     }
-
+    
     private void OnDisable()
     {
         GameManager.GoalLeftEvent -= BallRespawn;

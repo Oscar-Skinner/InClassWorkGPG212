@@ -6815,8 +6815,6 @@ MonoBehaviour:
   - {fileID: 840715774}
   - {fileID: 915393364}
   teamName: 0
-  scoreLeft: 0
-  scoreRight: 0
 --- !u!1 &678587711
 GameObject:
   m_ObjectHideFlags: 0
@@ -17110,7 +17108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30cb6b31597908741861a078ff188ee9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  teamName: 0
+  teamName: 1
 --- !u!114 &840715775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20455,6 +20453,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 903e1ac284cfb2c40abbf3127a8a3bc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goal:
+  - {fileID: 840715774}
+  - {fileID: 915393364}
+  teamName: 0
   leftGoalParticles1: {fileID: 327902783}
   leftGoalParticles2: {fileID: 707569888}
   rightGoalParticles1: {fileID: 740029033}
