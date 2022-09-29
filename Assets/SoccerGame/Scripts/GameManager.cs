@@ -1,47 +1,40 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public Goal[] goal;
-    
-    public TeamName teamName;
-    public enum TeamName
-    {
-        Left,
-        Right 
-    }
-        
+    public Goal[] goals;
+    public int LeftPoints = 0;
+    public int RightPoints = 0;
     private void OnEnable()
     {
-        foreach (Goal item in goal)
+        foreach (Goal item in goals)
         {
             item.GoalEvent += GoalOnGoalEvent;
         }
     }
     
-    // public delegate void ScoredGoal();
-    // public event ScoredGoal TeamScored;
-    public delegate void Scored(TeamName teams);
-    public event Scored GoalRightEvent;
-    public static event Scored GoalLeftEvent;
-    void GoalOnGoalEvent(Goal newGoal)
-    {
-        // foreach (Team team in teams)
-        // {
-        //     check at home :D
-        // }
-        
-        Debug.Log("got goal!"+newGoal);
+    public delegate void TeamScored(int Left, int Right);
+    public static event TeamScored TeamThatScored;
 
-        if (newGoal.name == "GoalLeft")
+    public delegate void CelebrateGoal();
+
+    public static event CelebrateGoal CheerAndCleanUp;
+    private void GoalOnGoalEvent(Goal goalCheck)
+    {
+        CheerAndCleanUp?.Invoke();
+
+        if (goalCheck.myTeam == Teams.Left)
         {
-            GoalRightEvent?.Invoke(TeamName.Right);
+            RightPoints++;
+            LeftPoints = LeftPoints;
+            TeamThatScored?.Invoke(LeftPoints, RightPoints);
         }
         
-        if (newGoal.name == "GoalRight")
+        if (goalCheck.myTeam == Teams.Right)
         {
-            GoalLeftEvent?.Invoke(TeamName.Left);
+            LeftPoints++;
+            RightPoints = RightPoints;
+            TeamThatScored?.Invoke(LeftPoints, RightPoints);
         }
     }
 }

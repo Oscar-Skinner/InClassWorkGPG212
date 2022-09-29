@@ -6,39 +6,29 @@ public class UIPoints : MonoBehaviour
     //for the UI
     public TMP_Text leftDisplayedPoints;
     public TMP_Text rightDisplayedPoints;
-    private string _left;
-    private string _right;
     
-    //for the total amount of points for each team.
-    private float _leftPointTotal = 0;
-    private float _rightPointTotal = 0;
 
-    // void OnEnable()
-    // {
-    //     GameManager.GoalLeftEvent += LeftScoresGetsPoints;
-    //     GameManager.GoalRightEvent += RightScoresGetsPoints;
-    // }
-    // void OnDisable()
-    // {
-    //     GameManager.GoalLeftEvent -= LeftScoresGetsPoints;
-    //     GameManager.GoalRightEvent -= RightScoresGetsPoints;
-    // }
+    void OnEnable()
+    {
+        GameManager.TeamThatScored += PointsDisplay;
+    }
+    void OnDisable()
+    {
+        GameManager.TeamThatScored -= PointsDisplay;
+    }
+    private void PointsDisplay(int left, int right)
+    {
+        print("points printing");
+        leftDisplayedPoints.text = "Left Team Score: " + left;
+        rightDisplayedPoints.text = "Right Team Score: " + right;
+    }
+
+    
 
     void Start()
     {
-        leftDisplayedPoints.text = "Left Team Score: " + _leftPointTotal;
-        rightDisplayedPoints.text = "Right Team Score: " + _rightPointTotal;
+        leftDisplayedPoints.text = "Left Team Score: 0";
+        rightDisplayedPoints.text = "Right Team Score: 0";
     }
-
-    void LeftScoresGetsPoints()
-    {
-        _leftPointTotal ++;
-        leftDisplayedPoints.text = "Left Team Score: " + _leftPointTotal;
-    }
-    void RightScoresGetsPoints()
-    {
-        _rightPointTotal ++;
-        rightDisplayedPoints.text = "Right Team Score: " + _rightPointTotal;
-    }
-
+    
 }

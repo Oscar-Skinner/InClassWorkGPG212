@@ -81,6 +81,7 @@
       <workItem from="1664414017705" duration="394000" />
       <workItem from="1664425533057" duration="500000" />
       <workItem from="1664426248229" duration="2564000" />
+      <workItem from="1664437613463" duration="8947000" />
     </task>
     <servers />
   </component>
@@ -90,6 +91,17 @@
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>

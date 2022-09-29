@@ -1,39 +1,28 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BallSpawn : MonoBehaviour
 {
     public GameObject Ball;
 
-    public GameManager gameManager;
-    
     private void OnEnable()
     {
-        
-        gameManager.GoalRightEvent += BallRespawn;
-        
+        GameManager.CheerAndCleanUp += RespawnBall;
     }
 
-    private void BallRespawn(GameManager.TeamName teamName)
+    private void OnDisable()
     {
-        if (teamName == GameManager.TeamName.Right)
-        {
-            Instantiate(Ball);
-        }
-        else if (teamName == GameManager.TeamName.Left)
-        {
-            Instantiate(Ball);
-        }
-        {
-            
-        }
-        print("did something");        
+        GameManager.CheerAndCleanUp -= RespawnBall;
     }
 
     void Start()
     {
         Instantiate(Ball);
     }
+    
+    private void RespawnBall()
+    {
+        Instantiate(Ball);
+    }
+
+    
 }

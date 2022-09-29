@@ -1,10 +1,14 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+public enum Teams
+{
+    Left,
+    Right
+}
 public class Goal : MonoBehaviour
 {
+    public Teams myTeam;
+    
     public delegate void GoalSignature(Goal goal);
     public event GoalSignature GoalEvent;
     

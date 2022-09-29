@@ -1,22 +1,17 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CommentatorsBooth : MonoBehaviour
 {
-    // private void OnEnable()
-    // {
-    //     InvisibleWalls.OutOfBounds += BallIsOutComment;
-    //     GameManager.GoalLeftEvent += LeftTeamScored;
-    //     GameManager.GoalRightEvent += RightTeamScored;
-    // }
-    // private void OnDisable()
-    // {
-    //     InvisibleWalls.OutOfBounds -= BallIsOutComment;
-    //     GameManager.GoalLeftEvent -= LeftTeamScored;
-    //     GameManager.GoalRightEvent -= RightTeamScored;
-    // }
+    private void OnEnable()
+    {
+        InvisibleWalls.OutOfBounds += BallIsOutComment;
+        GameManager.CheerAndCleanUp += GoalCommentary;
+    }
+    private void OnDisable()
+    {
+        InvisibleWalls.OutOfBounds -= BallIsOutComment;
+        GameManager.CheerAndCleanUp -= GoalCommentary;
+    }
 
     private void Start()
     {
@@ -27,14 +22,8 @@ public class CommentatorsBooth : MonoBehaviour
     {
         print("Lucky for those invisible walls because the ball has stayed in!");
     }
-    private void LeftTeamScored()
+    private void GoalCommentary()
     {
         print("!!!GOAL!!!");
-        print("THE LEFT TEAM SCORES THE POINT!");
-    }
-    private void RightTeamScored()
-    {
-        print("!!!GOAL!!!");
-        print("THE RIGHT TEAM SCORES THE POINT!");
     }
 }

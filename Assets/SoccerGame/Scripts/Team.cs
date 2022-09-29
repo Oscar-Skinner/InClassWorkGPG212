@@ -1,11 +1,12 @@
 using UnityEngine;
 
-public class TeamScript : MonoBehaviour
+public class Team : MonoBehaviour
 {
     public enum TeamName
     {
         Left,
-        Right
+        Right,
+        idle
     }
     public TeamName teamName;
 }

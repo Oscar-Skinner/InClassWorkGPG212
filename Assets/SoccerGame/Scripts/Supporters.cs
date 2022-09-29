@@ -6,31 +6,16 @@ using Random = UnityEngine.Random;
 
 public class Supporters : MonoBehaviour
 {
-    // private void OnEnable()
-    // {
-    //     GameManager.GoalLeftEvent += LeftCheer;
-    //     GameManager.GoalRightEvent +=  RightCheer;
-    // }
-    // private void OnDisable()
-    // {
-    //     GameManager.GoalLeftEvent -= LeftCheer;
-    //     GameManager.GoalRightEvent -=  RightCheer;
-    // }
-
-    private void FixedUpdate()
+    private void OnEnable()
     {
-        //make the characters idle jump based on a random range
+        GameManager.CheerAndCleanUp += Cheer;
+    }
+    private void OnDisable()
+    {
+        GameManager.CheerAndCleanUp -= Cheer;
     }
 
-    void IdleJump()
-    {
-        this.GetComponent<Rigidbody>().velocity = new Vector3(0, 2, 0);
-    }
-    public void LeftCheer()
-    {
-        this.GetComponent<Rigidbody>().velocity = new Vector3(0, Random.Range(0f,6f), 0);
-    }
-    public void RightCheer()
+    public void Cheer()
     {
         this.GetComponent<Rigidbody>().velocity = new Vector3(0, Random.Range(0f,6f), 0);
     }

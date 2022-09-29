@@ -25,14 +25,12 @@ public class Confetti : MonoBehaviour
     {
         if (newGoal.name == "GoalLeft")
         {
-            print("left goal particles");
             leftGoalParticles1.Play();
             leftGoalParticles2.Play();
         }
 
         if (newGoal.name == "GoalRight")
         {
-            print("right goal particles");
             rightGoalParticles1.Play();
             rightGoalParticles2.Play();
         }

@@ -6809,10 +6809,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa03ad99798fd3c48885e8b69eabd1d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goal:
+  goals:
   - {fileID: 840715774}
   - {fileID: 2094085609}
-  teamName: 0
+  LeftPoints: 0
+  RightPoints: 0
 --- !u!1 &678587711
 GameObject:
   m_ObjectHideFlags: 0
@@ -17005,7 +17006,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7951945843046438027, guid: f8b958240e416d84590eaa1cd064bb3b, type: 3}
       propertyPath: m_Name
-      value: Goal
+      value: GoalLeft
       objectReference: {fileID: 0}
     - target: {fileID: 7951945843046438029, guid: f8b958240e416d84590eaa1cd064bb3b, type: 3}
       propertyPath: teamName
@@ -17055,7 +17056,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7951945843046438029, guid: f8b958240e416d84590eaa1cd064bb3b, type: 3}
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: f8b958240e416d84590eaa1cd064bb3b, type: 3}
 --- !u!114 &840715774 stripped
@@ -17353,7 +17355,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Ball: {fileID: 2308679756375857273, guid: 4b7d9d7fb3aa3d044ac2646b1c191801, type: 3}
-  gameManager: {fileID: 509444533}
 --- !u!4 &931672656
 Transform:
   m_ObjectHideFlags: 0
@@ -20278,7 +20279,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goal:
   - {fileID: 840715774}
-  - {fileID: 0}
+  - {fileID: 2094085609}
   leftGoalParticles1: {fileID: 327902783}
   leftGoalParticles2: {fileID: 707569888}
   rightGoalParticles1: {fileID: 740029033}
@@ -25977,7 +25978,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7951945843046438027, guid: f8b958240e416d84590eaa1cd064bb3b, type: 3}
       propertyPath: m_Name
-      value: Goal
+      value: GoalRight
+      objectReference: {fileID: 0}
+    - target: {fileID: 7951945843046438028, guid: f8b958240e416d84590eaa1cd064bb3b, type: 3}
+      propertyPath: myTeam
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7951945843046438031, guid: f8b958240e416d84590eaa1cd064bb3b, type: 3}
       propertyPath: m_RootOrder
@@ -26023,6 +26028,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7951945843046438029, guid: f8b958240e416d84590eaa1cd064bb3b, type: 3}
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: f8b958240e416d84590eaa1cd064bb3b, type: 3}
