@@ -14,7 +14,7 @@ public class Confetti : MonoBehaviour
     public ParticleSystem rightGoalParticles1;
     public ParticleSystem rightGoalParticles2;
 
-    private void Start()
+    void OnEnable()
     {
         for (var index = 0; index <goal.Length; index++)
         {
