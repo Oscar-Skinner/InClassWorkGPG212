@@ -1,37 +1,47 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     public Goal[] goal;
     
-    public Team.TeamName teamName;
-
-    private void Start()
+    public TeamName teamName;
+    public enum TeamName
     {
-        for (var index = 0; index <goal.Length; index++)
+        Left,
+        Right 
+    }
+        
+    private void OnEnable()
+    {
+        foreach (Goal item in goal)
         {
-            var item = goal[index];
             item.GoalEvent += GoalOnGoalEvent;
         }
     }
     
     // public delegate void ScoredGoal();
     // public event ScoredGoal TeamScored;
-    public delegate void Scored();
-    public static event Scored GoalRightEvent;
+    public delegate void Scored(TeamName teams);
+    public event Scored GoalRightEvent;
     public static event Scored GoalLeftEvent;
     void GoalOnGoalEvent(Goal newGoal)
     {
+        // foreach (Team team in teams)
+        // {
+        //     check at home :D
+        // }
+        
         Debug.Log("got goal!"+newGoal);
 
         if (newGoal.name == "GoalLeft")
         {
-            GoalRightEvent?.Invoke();
+            GoalRightEvent?.Invoke(TeamName.Right);
         }
         
         if (newGoal.name == "GoalRight")
         {
-            GoalLeftEvent?.Invoke();
+            GoalLeftEvent?.Invoke(TeamName.Left);
         }
     }
 }

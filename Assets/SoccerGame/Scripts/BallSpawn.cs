@@ -7,26 +7,33 @@ public class BallSpawn : MonoBehaviour
 {
     public GameObject Ball;
 
+    public GameManager gameManager;
+    
     private void OnEnable()
     {
-        GameManager.GoalLeftEvent += BallRespawn;
-        GameManager.GoalRightEvent += BallRespawn;
+        
+        gameManager.GoalRightEvent += BallRespawn;
+        
     }
-    
-    private void OnDisable()
+
+    private void BallRespawn(GameManager.TeamName teamName)
     {
-        GameManager.GoalLeftEvent -= BallRespawn;
-        GameManager.GoalRightEvent -= BallRespawn;
+        if (teamName == GameManager.TeamName.Right)
+        {
+            Instantiate(Ball);
+        }
+        else if (teamName == GameManager.TeamName.Left)
+        {
+            Instantiate(Ball);
+        }
+        {
+            
+        }
+        print("did something");        
     }
 
     void Start()
     {
         Instantiate(Ball);
     }
-
-    void BallRespawn()
-    {
-        Instantiate(Ball);
-    }
-    
 }

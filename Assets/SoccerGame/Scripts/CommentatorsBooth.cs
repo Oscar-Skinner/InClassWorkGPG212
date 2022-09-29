@@ -5,18 +5,18 @@ using UnityEngine;
 
 public class CommentatorsBooth : MonoBehaviour
 {
-    private void OnEnable()
-    {
-        InvisibleWalls.OutOfBounds += BallIsOutComment;
-        GameManager.GoalLeftEvent += LeftTeamScored;
-        GameManager.GoalRightEvent += RightTeamScored;
-    }
-    private void OnDisable()
-    {
-        InvisibleWalls.OutOfBounds -= BallIsOutComment;
-        GameManager.GoalLeftEvent -= LeftTeamScored;
-        GameManager.GoalRightEvent -= RightTeamScored;
-    }
+    // private void OnEnable()
+    // {
+    //     InvisibleWalls.OutOfBounds += BallIsOutComment;
+    //     GameManager.GoalLeftEvent += LeftTeamScored;
+    //     GameManager.GoalRightEvent += RightTeamScored;
+    // }
+    // private void OnDisable()
+    // {
+    //     InvisibleWalls.OutOfBounds -= BallIsOutComment;
+    //     GameManager.GoalLeftEvent -= LeftTeamScored;
+    //     GameManager.GoalRightEvent -= RightTeamScored;
+    // }
 
     private void Start()
     {

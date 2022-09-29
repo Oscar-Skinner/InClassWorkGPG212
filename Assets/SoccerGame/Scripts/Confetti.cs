@@ -7,8 +7,6 @@ public class Confetti : MonoBehaviour
 {
     public Goal[] goal;
     
-    public Team.TeamName teamName;
-
     public ParticleSystem leftGoalParticles1;
     public ParticleSystem leftGoalParticles2;
     public ParticleSystem rightGoalParticles1;

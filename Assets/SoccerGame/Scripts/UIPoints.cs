@@ -13,16 +13,16 @@ public class UIPoints : MonoBehaviour
     private float _leftPointTotal = 0;
     private float _rightPointTotal = 0;
 
-    void OnEnable()
-    {
-        GameManager.GoalLeftEvent += LeftScoresGetsPoints;
-        GameManager.GoalRightEvent += RightScoresGetsPoints;
-    }
-    void OnDisable()
-    {
-        GameManager.GoalLeftEvent -= LeftScoresGetsPoints;
-        GameManager.GoalRightEvent -= RightScoresGetsPoints;
-    }
+    // void OnEnable()
+    // {
+    //     GameManager.GoalLeftEvent += LeftScoresGetsPoints;
+    //     GameManager.GoalRightEvent += RightScoresGetsPoints;
+    // }
+    // void OnDisable()
+    // {
+    //     GameManager.GoalLeftEvent -= LeftScoresGetsPoints;
+    //     GameManager.GoalRightEvent -= RightScoresGetsPoints;
+    // }
 
     void Start()
     {

@@ -6,16 +6,16 @@ using Random = UnityEngine.Random;
 
 public class Supporters : MonoBehaviour
 {
-    private void OnEnable()
-    {
-        GameManager.GoalLeftEvent += LeftCheer;
-        GameManager.GoalRightEvent +=  RightCheer;
-    }
-    private void OnDisable()
-    {
-        GameManager.GoalLeftEvent -= LeftCheer;
-        GameManager.GoalRightEvent -=  RightCheer;
-    }
+    // private void OnEnable()
+    // {
+    //     GameManager.GoalLeftEvent += LeftCheer;
+    //     GameManager.GoalRightEvent +=  RightCheer;
+    // }
+    // private void OnDisable()
+    // {
+    //     GameManager.GoalLeftEvent -= LeftCheer;
+    //     GameManager.GoalRightEvent -=  RightCheer;
+    // }
 
     private void FixedUpdate()
     {

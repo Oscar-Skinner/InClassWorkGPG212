@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Team : MonoBehaviour
+public class TeamScript : MonoBehaviour
 {
     public enum TeamName
     {
