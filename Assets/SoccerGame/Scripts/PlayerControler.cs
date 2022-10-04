@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,13 +13,14 @@ public class PlayerControler : MonoBehaviour
     private void OnEnable()
     {
         var mainInputControles = new MainInputControles();
+
         mainInputControles.Enable();
         
         mainInputControles.InGame.LeftPlayer.performed += LeftPlayerMovement;
         mainInputControles.InGame.RightPlayer.performed += RightPlayerMovement;
         
     }
-    
+
     private void LeftPlayerMovement(InputAction.CallbackContext obj)
     {
         leftPlayer.MoveDirection = obj.ReadValue<Vector2>();
