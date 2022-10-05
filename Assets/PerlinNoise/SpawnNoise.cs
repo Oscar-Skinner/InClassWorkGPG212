@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,21 +6,28 @@ using UnityEngine;
 public class SpawnNoise : MonoBehaviour
 {
     public GameObject Prefab;
-    
-    public int amount = 20;
 
-    private float scaleX = 1f;
+    private int amount = 200;
 
-    private float heightScale = 2f;
+    public float scale = 40;
+    public float zoom;
     
-    
-    // Start is called before the first frame update
-    void Start()
+    private float x;
+    private float y;
+    private Vector3 prefabPosition;
+    private void Start()
     {
-        for (int x = 0; x < amount; x++)
+        for (int positionX = 0; positionX < amount; positionX++)
         {
-            float height = heightScale * Mathf.PerlinNoise(scaleX, 0f);
-            Instantiate(Prefab, new Vector3(x, height, 0), Quaternion.identity);
+            for (int positionZ = 0; positionZ < amount; positionZ++)
+            {
+                prefabPosition.x = positionX;
+                prefabPosition.y = Mathf.PerlinNoise((positionX * zoom), (positionZ * zoom)) * scale;
+                prefabPosition.z = positionZ;
+                Instantiate(Prefab, prefabPosition, Quaternion.identity);
+            }
         }
+        
     }
+
 }

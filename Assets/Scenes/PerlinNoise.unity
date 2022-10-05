@@ -331,8 +331,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Prefab: {fileID: 6913321944736682335, guid: a78409e6e4df88543a1e66fa90b38546, type: 3}
-  Width: 20
-  height: 20
+  scale: 40
+  zoom: 0.01
 --- !u!4 &1678937776
 Transform:
   m_ObjectHideFlags: 0
