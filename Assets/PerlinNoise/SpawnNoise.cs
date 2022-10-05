@@ -6,19 +6,20 @@ public class SpawnNoise : MonoBehaviour
 {
     public GameObject Prefab;
     
-    public int Width = 20;
-    public int height = 20;
+    public int amount = 20;
+
+    private float scaleX = 1f;
+
+    private float heightScale = 2f;
+    
+    
     // Start is called before the first frame update
     void Start()
     {
-        for (int y = 0; y < height; y++)
+        for (int x = 0; x < amount; x++)
         {
-            for (int x = 0; x < Width; x++)
-            {
-                Mathf.PerlinNoise(x, 0);
-                Instantiate(Prefab, new Vector3(x, 0, 0), Quaternion.identity);
-            }
+            float height = heightScale * Mathf.PerlinNoise(scaleX, 0f);
+            Instantiate(Prefab, new Vector3(x, height, 0), Quaternion.identity);
         }
-        
     }
 }

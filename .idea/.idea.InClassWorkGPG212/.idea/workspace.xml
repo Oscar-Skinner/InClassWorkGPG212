@@ -4,11 +4,6 @@
     <list default="true" id="90e8c30d-e692-44ec-90c6-2beb2e1842d3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.InClassWorkGPG212/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.InClassWorkGPG212/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/PerlinNoise/SpawnNoise.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PerlinNoise/SpawnNoise.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PerlinNoise.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PerlinNoise.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SoccerGame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SoccerGame.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SoccerGame/Prefabs/player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoccerGame/Prefabs/player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SoccerGame/Scripts/PlayerControler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoccerGame/Scripts/PlayerControler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SoccerGame/Scripts/Players.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoccerGame/Scripts/Players.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,9 +15,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/SoccerGame/Scripts/Confetti.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SoccerGame/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SoccerGame/Scripts/InvisibleWalls.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/1027514/Documents/InClassWorkGPG212/Assets/SoccerGame/Scripts/Players.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/1027514/Documents/InClassWorkGPG212/Assets/SoccerGame/Scripts/Players.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/1027514/Documents/InClassWorkGPG212/Assets/SoccerGame/Scripts/Players.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.3.0/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/StandaloneInputModule.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -99,6 +91,7 @@
       <workItem from="1664787129705" duration="304000" />
       <workItem from="1664841706425" duration="1827000" />
       <workItem from="1664923428240" duration="7651000" />
+      <workItem from="1664939031459" duration="1437000" />
     </task>
     <servers />
   </component>
