@@ -25804,7 +25804,7 @@ PrefabInstance:
     - target: {fileID: 3275470831958719748, guid: 2bce0b20349a93a44a46fdef8e7acc05, type: 3}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 13400000, guid: de55adc8433b3ca4f885ecee76a60e31, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 5090851158327462233, guid: 2bce0b20349a93a44a46fdef8e7acc05, type: 3}
       propertyPath: m_Drag
       value: 0
@@ -25839,14 +25839,18 @@ PrefabInstance:
     - target: {fileID: 3275470831958719748, guid: 2bce0b20349a93a44a46fdef8e7acc05, type: 3}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 13400000, guid: de55adc8433b3ca4f885ecee76a60e31, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 5090851158327462233, guid: 2bce0b20349a93a44a46fdef8e7acc05, type: 3}
       propertyPath: m_Drag
-      value: 0
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5090851158327462233, guid: 2bce0b20349a93a44a46fdef8e7acc05, type: 3}
       propertyPath: m_AngularDrag
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5360483918925829559, guid: 2bce0b20349a93a44a46fdef8e7acc05, type: 3}
+      propertyPath: playerSpeed
+      value: 15000
       objectReference: {fileID: 0}
     - target: {fileID: 6883651446730414901, guid: 2bce0b20349a93a44a46fdef8e7acc05, type: 3}
       propertyPath: m_RootOrder

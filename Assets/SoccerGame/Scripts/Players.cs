@@ -8,7 +8,6 @@ public class Players : MonoBehaviour
     public Vector2 MoveDirection;
     public Rigidbody playerRigidbody;
     public float playerSpeed = 1500f;
-
     private void Start()
     {
         playerRigidbody = this.GetComponent<Rigidbody>();
@@ -16,7 +15,7 @@ public class Players : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector3 finalMove = new Vector3(MoveDirection.x, 0, MoveDirection.y);
-        playerRigidbody.AddRelativeForce(finalMove * playerSpeed * Time.deltaTime);
+        Vector3 move = new Vector3(MoveDirection.x, 0, MoveDirection.y);
+        playerRigidbody.AddRelativeForce(move * playerSpeed);
     }
 }
