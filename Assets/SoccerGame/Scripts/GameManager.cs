@@ -26,14 +26,12 @@ public class GameManager : MonoBehaviour
         if (goalCheck.myTeam == Teams.Left)
         {
             RightPoints++;
-            LeftPoints = LeftPoints;
             TeamThatScored?.Invoke(LeftPoints, RightPoints);
         }
         
         if (goalCheck.myTeam == Teams.Right)
         {
             LeftPoints++;
-            RightPoints = RightPoints;
             TeamThatScored?.Invoke(LeftPoints, RightPoints);
         }
     }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4366756, g: 0.48427194, b: 0.5645252, a: 1}
+  m_IndirectSpecularColor: {r: 0.4366757, g: 0.48427194, b: 0.5645252, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -17249,7 +17249,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 931672654}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -25801,6 +25801,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3275470831958719748, guid: 2bce0b20349a93a44a46fdef8e7acc05, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: de55adc8433b3ca4f885ecee76a60e31, type: 2}
+    - target: {fileID: 5090851158327462233, guid: 2bce0b20349a93a44a46fdef8e7acc05, type: 3}
+      propertyPath: m_Drag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5090851158327462233, guid: 2bce0b20349a93a44a46fdef8e7acc05, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6883651446730414901, guid: 2bce0b20349a93a44a46fdef8e7acc05, type: 3}
       propertyPath: m_RootOrder
       value: 21
@@ -25824,6 +25836,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: player
       objectReference: {fileID: 0}
+    - target: {fileID: 3275470831958719748, guid: 2bce0b20349a93a44a46fdef8e7acc05, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: de55adc8433b3ca4f885ecee76a60e31, type: 2}
     - target: {fileID: 5090851158327462233, guid: 2bce0b20349a93a44a46fdef8e7acc05, type: 3}
       propertyPath: m_Drag
       value: 0

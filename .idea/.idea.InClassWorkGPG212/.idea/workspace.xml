@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="90e8c30d-e692-44ec-90c6-2beb2e1842d3" name="Changes" comment="" />
+    <list default="true" id="90e8c30d-e692-44ec-90c6-2beb2e1842d3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.InClassWorkGPG212/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.InClassWorkGPG212/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SoccerGame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SoccerGame.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoccerGame/Prefabs/SoccerBall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoccerGame/Prefabs/SoccerBall.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoccerGame/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoccerGame/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoccerGame/Scripts/PlayerControler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoccerGame/Scripts/PlayerControler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoccerGame/Scripts/Players.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoccerGame/Scripts/Players.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,7 +44,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="D:\Unity\2022.1.8f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity 2022.1.8f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath &quot;C:\Users\Oscar Skinner\Documents\InClassWorkGPG212&quot; -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\Oscar Skinner\Documents\InClassWorkGPG212" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -86,6 +95,7 @@
       <workItem from="1664776857062" duration="6142000" />
       <workItem from="1664787129705" duration="304000" />
       <workItem from="1664841706425" duration="1827000" />
+      <workItem from="1664923428240" duration="2012000" />
     </task>
     <servers />
   </component>
