@@ -33,7 +33,7 @@ public partial class @MainInputControles : IInputActionCollection2, IDisposable
                     ""id"": ""33cab1d2-ada1-4c3f-b74b-e78ae6741b55"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
-                    ""interactions"": """",
+                    ""interactions"": ""Press(behavior=2)"",
                     ""initialStateCheck"": true
                 },
                 {
@@ -42,7 +42,7 @@ public partial class @MainInputControles : IInputActionCollection2, IDisposable
                     ""id"": ""296c148c-251b-42ed-8ea3-939f504bb4be"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
-                    ""interactions"": """",
+                    ""interactions"": ""Press(behavior=2)"",
                     ""initialStateCheck"": true
                 }
             ],

@@ -3,7 +3,8 @@ using UnityEngine;
 public enum Teams
 {
     Left,
-    Right
+    Right,
+    idle
 }
 public class Goal : MonoBehaviour
 {
