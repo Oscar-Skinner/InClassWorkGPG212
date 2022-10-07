@@ -5,11 +5,10 @@ using UnityEngine;
 
 public class Players : MonoBehaviour
 {
-    public Goal myGoal;
-    
     public Vector2 MoveDirection;
     public Rigidbody playerRigidbody;
     public float playerSpeed = 1500f;
+
     private void Start()
     {
         playerRigidbody = this.GetComponent<Rigidbody>();

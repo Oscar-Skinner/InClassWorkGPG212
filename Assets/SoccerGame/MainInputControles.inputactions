@@ -17,7 +17,7 @@
                 {
                     "name": "RightPlayer",
                     "type": "Value",
-                    "id": "296c148c-251b-42ed-8ea3-939f504bb4be",
+                    "id": "c77895d7-6c9c-4b23-a693-590ec4cff167",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "Press(behavior=2)",
@@ -137,7 +137,7 @@
                 },
                 {
                     "name": "2D Vector Controller",
-                    "id": "1dde44fa-24e6-4ebb-9aa3-19aa1b10e798",
+                    "id": "f8eeb9bf-f170-4a45-b294-b7e1c4b9caa3",
                     "path": "2DVector",
                     "interactions": "",
                     "processors": "",
@@ -148,7 +148,7 @@
                 },
                 {
                     "name": "up",
-                    "id": "7afacfa7-15c1-4449-9ce6-f22a27dab6fc",
+                    "id": "610decda-0604-4e0a-adf0-fb2aa486f38d",
                     "path": "<Gamepad>/leftStick/up",
                     "interactions": "",
                     "processors": "",
@@ -159,7 +159,7 @@
                 },
                 {
                     "name": "down",
-                    "id": "e03d84b7-7ffc-4ef2-b414-7b09af08b1d3",
+                    "id": "04a7f009-19e4-4dec-9aac-2a3320cc33d3",
                     "path": "<Gamepad>/leftStick/down",
                     "interactions": "",
                     "processors": "",
@@ -170,7 +170,7 @@
                 },
                 {
                     "name": "left",
-                    "id": "5d485e71-77d1-4d11-8603-08ed1a7685a5",
+                    "id": "96d06e7d-a36c-4140-b821-1564a869098e",
                     "path": "<Gamepad>/leftStick/left",
                     "interactions": "",
                     "processors": "",
@@ -181,7 +181,7 @@
                 },
                 {
                     "name": "right",
-                    "id": "3918598b-5092-4f09-891d-0d9556d586d3",
+                    "id": "6f906cf9-87fa-4885-9b88-7a8a8571e6f5",
                     "path": "<Gamepad>/leftStick/right",
                     "interactions": "",
                     "processors": "",
@@ -192,7 +192,7 @@
                 },
                 {
                     "name": "2D Vector Keyboard",
-                    "id": "c6cf0574-6049-4fb7-bf72-465d61bfb756",
+                    "id": "c2cc27c1-8a6f-4413-8dc1-26de81dafc98",
                     "path": "2DVector",
                     "interactions": "",
                     "processors": "",
@@ -203,7 +203,7 @@
                 },
                 {
                     "name": "up",
-                    "id": "5b88ab70-a5f8-41e8-a358-1fafbfb026a0",
+                    "id": "3cfe7a6c-87b5-46ff-88bf-82483edd2a41",
                     "path": "<Keyboard>/upArrow",
                     "interactions": "",
                     "processors": "",
@@ -214,7 +214,7 @@
                 },
                 {
                     "name": "down",
-                    "id": "43d664b3-afe9-4d4b-91cb-9b33149b8a4d",
+                    "id": "07cdb86e-fa3d-4006-a1ee-5db600451e8f",
                     "path": "<Keyboard>/downArrow",
                     "interactions": "",
                     "processors": "",
@@ -225,7 +225,7 @@
                 },
                 {
                     "name": "left",
-                    "id": "4a849a4d-c6a1-4a1b-b161-8e272fc6057a",
+                    "id": "b4c7e499-0a38-4812-86ad-914ab3dbd7a4",
                     "path": "<Keyboard>/leftArrow",
                     "interactions": "",
                     "processors": "",
@@ -236,7 +236,7 @@
                 },
                 {
                     "name": "right",
-                    "id": "9ee6515d-7d10-4447-9c77-15030f2f6402",
+                    "id": "19efcd0a-ace3-4308-9a94-1c65c763f12b",
                     "path": "<Keyboard>/rightArrow",
                     "interactions": "",
                     "processors": "",
