@@ -173,8 +173,12 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 33cab1d2-ada1-4c3f-b74b-e78ae6741b55
     m_ActionName: InGame/LeftPlayer[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/DualShock4GamepadHID/leftStick]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b0a38f2c-b3aa-4fc9-972d-60bc69f3ddb2
+    m_ActionName: Player/Movement
   m_NeverAutoSwitchControlSchemes: 1
-  m_DefaultControlScheme: 
+  m_DefaultControlScheme: Gamepad
   m_DefaultActionMap: InGame
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
