@@ -16,10 +16,10 @@ public class PlayerControler : MonoBehaviour
         MainInputControles mainInputControles = new MainInputControles();
         mainInputControles.Enable();
         
-        mainInputControles.InGame.LeftPlayer.performed += LeftPlayerMovement;
-        mainInputControles.InGame.RightPlayer.performed += RightPlayerMovement;
-        mainInputControles.InGame.LeftPlayer.canceled += LeftPlayerMovement;
-        mainInputControles.InGame.RightPlayer.canceled += RightPlayerMovement;
+        mainInputControles.InGame.Movement.performed += LeftPlayerMovement;
+        //mainInputControles.InGame.RightPlayer.performed += RightPlayerMovement;
+        mainInputControles.InGame.Movement.canceled += LeftPlayerMovement;
+        //mainInputControles.InGame.RightPlayer.canceled += RightPlayerMovement;
     }
 
     private void LeftPlayerMovement(InputAction.CallbackContext obj)
