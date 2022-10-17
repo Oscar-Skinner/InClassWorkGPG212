@@ -1,10 +1,15 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(CharacterController))]
+[RequireComponent(typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour
 {
-    private CharacterController controller;
+    //for spawning the player
+    public int playerID;
+    public Vector3 startPos;
+    
+    //for player movement
+    private Rigidbody rb;
     private Vector3 playerVelocity;
     private bool groundedPlayer;
     
@@ -16,36 +21,23 @@ public class PlayerController : MonoBehaviour
     private Vector2 movementInput = Vector2.zero;
     private void Start()
     {
-        controller = gameObject.GetComponent<CharacterController>();
+        this.transform.position = startPos;
+        rb = gameObject.GetComponent<Rigidbody>();
     }
 
     public void OnMove(InputAction.CallbackContext context)
     {
         movementInput = context.ReadValue<Vector2>();
-        
-        // if (context.started)
-        // {
-        //     movementInput = context.ReadValue<Vector2>();
-        // }
-        // else if (context.canceled)
-        // {
-        //     movementInput = context.ReadValue<Vector2>();
-        // }
-
     }
 
     void Update()
     {
-        groundedPlayer = controller.isGrounded;
         if (groundedPlayer && playerVelocity.y < 0)
         {
             playerVelocity.y = 0f;
         }
         
         Vector3 move = new Vector3(movementInput.x, 0, movementInput.y);
-        controller.Move(move * Time.deltaTime * playerSpeed);
-
-        playerVelocity.y += gravityValue * Time.deltaTime;
-        controller.Move(playerVelocity * Time.deltaTime);
+        rb.AddRelativeForce(move * playerSpeed);
     }
 }
