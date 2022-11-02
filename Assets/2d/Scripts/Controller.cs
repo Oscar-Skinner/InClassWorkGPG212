@@ -1,59 +1,65 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using Input = UnityEngine.Windows.Input;
+using Vector2 = UnityEngine.Vector2;
+using Vector3 = UnityEngine.Vector3;
 
-[RequireComponent(typeof(CharacterController))]
+[RequireComponent(typeof(Rigidbody2D))]
 public class Controller : MonoBehaviour
 {
     //for the players
     public int playerID;
 
     //for the player movement
-    private CharacterController charControls;
+    private Rigidbody2D rb;
     private Vector3 playerVelocity;
     private bool groundedPlayer;
-
-    [SerializeField] private float playerSpeed = 2.0f;
-    [SerializeField] private float jumpHeight = 2f;
-    [SerializeField] private float gravityValue = -9.81f;
-
     private Vector2 movementInput = Vector2.zero;
+    
+    [SerializeField] private float playerSpeed = 3.0f;
+    [SerializeField] private float jumpHeight = 6f;
+    [SerializeField] private LayerMask jumpableGround;
+    
+    private BoxCollider2D coll;
     private bool jumped = false;
     void Start()
     {
-        charControls = gameObject.GetComponent<CharacterController>();
+        rb = gameObject.GetComponent<Rigidbody2D>();
+        coll = GetComponent<BoxCollider2D>();
     }
 
     public void OnMove(InputAction.CallbackContext context)
     {
+        //move the player
         movementInput = context.ReadValue<Vector2>();
     }
 
     public void OnJump(InputAction.CallbackContext context)
     {
-        // jumped = context.ReadValue<bool>();
-        jumped = context.action.triggered;
+        //if its grounded then allow the player to jump
+        if (IsGrounded() == true)
+        {
+            jumped = true;
+        }
     }
-    
+
+    private bool IsGrounded()
+    {
+        //create a box to detect whether the player is standing on the ground or not.
+        return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, jumpableGround);
+    }
+
     void Update()
     {
-        groundedPlayer = charControls.isGrounded;
-        if (groundedPlayer && playerVelocity.y < 0)
-        {
-            playerVelocity.y = 0f;
-        }
-
+        //for the player movement left and right.
         Vector3 move = new Vector3(movementInput.x, 0, 0);
-        charControls.Move(move * Time.deltaTime * playerSpeed);
-
-        if (jumped && groundedPlayer)
+        rb.AddRelativeForce(move * playerSpeed);
+        
+        //if jumped is true then make the players rb jump.
+        if (jumped == true)
         {
-            playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
+            rb.AddRelativeForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
+            jumped = false;
         }
-
-        playerVelocity.y += gravityValue * Time.deltaTime;
-        charControls.Move(playerVelocity * Time.deltaTime);
     }
+    
 }

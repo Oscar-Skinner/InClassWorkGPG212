@@ -8,6 +8,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/2d/Interfaces/Interfaces.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/2d/Scripts/Controller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SoccerGame/Scripts/Confetti.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SoccerGame/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -102,6 +103,7 @@
       <workItem from="1665990941022" duration="81000" />
       <workItem from="1665991717536" duration="3785000" />
       <workItem from="1667264839355" duration="3950000" />
+      <workItem from="1667348575738" duration="8960000" />
     </task>
     <servers />
   </component>
