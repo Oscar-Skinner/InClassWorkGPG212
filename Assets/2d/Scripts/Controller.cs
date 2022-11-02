@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Vector2 = UnityEngine.Vector2;
@@ -6,6 +8,10 @@ using Vector3 = UnityEngine.Vector3;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Controller : MonoBehaviour
 {
+    public Weapon playersWeapon;
+
+    private Animator movementAnimator;
+    
     //for the players
     public int playerID;
 
@@ -21,16 +27,28 @@ public class Controller : MonoBehaviour
     
     private BoxCollider2D coll;
     private bool jumped = false;
+
+    private bool moved = false;
+
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
         coll = GetComponent<BoxCollider2D>();
+        movementAnimator = GetComponent<Animator>();
     }
 
     public void OnMove(InputAction.CallbackContext context)
     {
         //move the player
         movementInput = context.ReadValue<Vector2>();
+        if (context.performed)
+        {
+            moved = true;
+        }
+        else if (context.canceled)
+        {
+            moved = false;
+        }
     }
 
     public void OnJump(InputAction.CallbackContext context)
@@ -40,6 +58,11 @@ public class Controller : MonoBehaviour
         {
             jumped = true;
         }
+    }
+
+    public void OnShoot(InputAction.CallbackContext context)
+    {
+        playersWeapon.shoot();
     }
 
     private bool IsGrounded()
@@ -58,8 +81,17 @@ public class Controller : MonoBehaviour
         if (jumped == true)
         {
             rb.AddRelativeForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
+            movementAnimator.SetTrigger("Jump");
             jumped = false;
         }
+        
+        if (moved == true)
+        {
+            movementAnimator.SetBool("isRunning", true);
+        }
+        else
+        {
+            movementAnimator.SetBool("isRunning", false);
+        }
     }
-    
 }

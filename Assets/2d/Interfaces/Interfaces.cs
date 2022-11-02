@@ -1,4 +1,4 @@
-public interface IFloor
+public interface IDamageable
 {
-    
+    void TakeDamage();
 }
