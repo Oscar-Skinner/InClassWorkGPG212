@@ -6,21 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="90e8c30d-e692-44ec-90c6-2beb2e1842d3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.InClassWorkGPG212/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.InClassWorkGPG212/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2d/PlayerInputAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2d/PlayerInputAction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MainInputControles.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MainInputControles.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SoccerGame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SoccerGame.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SoccerGame/Prefabs/player.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SoccerGame/Prefabs/player.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Networking/Networking Scripts/ChangeColour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Networking/Networking Scripts/ChangeColour.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +29,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/SoccerGame/Scripts/InvisibleWalls.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SoccerGame/Scripts/SpawnLocs.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.netcode.gameobjects@1.4.0/Runtime/Core/NetworkBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.netcode.gameobjects@1.4.0/Runtime/Core/NetworkManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/StandaloneInputModule.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -171,7 +159,7 @@
       <workItem from="1685500905157" duration="871000" />
       <workItem from="1685505722098" duration="1007000" />
       <workItem from="1685506855296" duration="3178000" />
-      <workItem from="1685510071320" duration="3728000" />
+      <workItem from="1685510071320" duration="5701000" />
     </task>
     <servers />
   </component>
