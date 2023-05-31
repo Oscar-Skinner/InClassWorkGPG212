@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour
 {
     //for spawning the player
@@ -9,20 +8,18 @@ public class PlayerController : MonoBehaviour
     public Vector3 startPos;
     
     //for player movement
-    private Rigidbody rb;
+    public Rigidbody rb;
     private Vector3 playerVelocity;
     private bool groundedPlayer;
     
-    [SerializeField]
-    private float playerSpeed = 2.0f;
+    public float playerSpeed;
     [SerializeField]
     private float gravityValue = -9.81f;
 
     private Vector2 movementInput = Vector2.zero;
     private void Start()
     {
-        this.transform.position = startPos;
-        rb = gameObject.GetComponent<Rigidbody>();
+        transform.position = startPos;
     }
 
     public void OnMove(InputAction.CallbackContext context)
