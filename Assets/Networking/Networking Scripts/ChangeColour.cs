@@ -7,20 +7,20 @@ public class ChangeColour : NetworkBehaviour
 {
     public NetworkVariable<Vector4> ColorValue  = new NetworkVariable<Vector4>();
 
-    /*
+    
     public override void OnNetworkSpawn()
     {
         if (IsOwner)
         {
-            ChangeColor();
+            ChangeTheColor();
         }
     }
 
-    public void ChangeColor()
+    public void ChangeTheColor()
     {
         if (NetworkManager.Singleton.IsServer)
         {
-            Vector4 randomColour = GetRandomMaterialIndex();
+            Vector4 randomColour = GetRandomColourValue();
             SetColor(randomColour);
         }
         else
@@ -32,29 +32,34 @@ public class ChangeColour : NetworkBehaviour
     [ServerRpc]
     void SubmitMaterialIndexRequestServerRpc(ServerRpcParams rpcParams = default)
     {
-        int randomIndex = GetRandomMaterialIndex();
-        setMaterialIndex(randomIndex);
+        Vector4 randomIndex = GetRandomColourValue();
+        SetColor(randomIndex);
     }
 
     void SetColor(Vector4 color)
     {
-        ColorValue .Value = index;
+        ColorValue.Value = color;
         // Apply the material change to the object
         Renderer renderer = GetComponent<Renderer>();
-        if (renderer != null && renderer.sharedMaterials.Length > index)
+        if (renderer != null && renderer.sharedMaterials != null)
         {
-            Material newMaterial = renderer.sharedMaterials[index];
+            Material newMaterial = new Material(renderer.sharedMaterial);
+            newMaterial.color = new Color(color.x / 255f, color.y / 255f, color.z / 255f, color.w / 255f);
             renderer.material = newMaterial;
         }
     }
     
-    static int GetRandomMaterialIndex()
+    static Vector4 GetRandomColourValue()
     {
-        return Random.Range(0, 3);
+        return new Vector4(Random.Range(0,255),Random.Range(0,255),Random.Range(0,255),255);
     }
 
     void Update()
     {
-        SetColor(ColorValue .Value);
-    }*/
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            ChangeTheColor();
+        }
+        SetColor(ColorValue.Value);
+    }
 }

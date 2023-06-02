@@ -17,7 +17,7 @@ public class NetworkGameManager : MonoBehaviour
         else
         {
             StatusLabels();
-
+            SubmitNewColor();
             SubmitNewPosition();
         }
 
@@ -55,6 +55,23 @@ public class NetworkGameManager : MonoBehaviour
                 var playerObject = NetworkManager.Singleton.SpawnManager.GetLocalPlayerObject();
                 var player = playerObject.GetComponent<NetworkPlayerModel>();
                 player.Move();
+            }
+        }
+    }
+    static void SubmitNewColor()
+    {
+        if (GUILayout.Button(NetworkManager.Singleton.IsServer ? "Change Colour" : "Request Colour Change"))
+        {
+            if (NetworkManager.Singleton.IsServer && !NetworkManager.Singleton.IsClient )
+            {
+                foreach (ulong uid in NetworkManager.Singleton.ConnectedClientsIds)
+                    NetworkManager.Singleton.SpawnManager.GetPlayerNetworkObject(uid).GetComponentInChildren<ChangeColour>().ChangeTheColor();
+            }
+            else
+            {
+                var playerObject = NetworkManager.Singleton.SpawnManager.GetLocalPlayerObject();
+                var player = playerObject.GetComponentInChildren<ChangeColour>();
+                player.ChangeTheColor();
             }
         }
     }
